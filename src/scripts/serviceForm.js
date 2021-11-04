@@ -6,14 +6,14 @@ mainContainer.addEventListener("click",
  clickEvent => {
     if (clickEvent.target.id === "submitRequest") {
         // Get what the user typed into the form fields
-        const userDescription = document.querySelector("input[name='duration']").value
+        const userDuration = document.querySelector("input[name='duration']").value
         const userAddress = document.querySelector("input[name='address']").value
         const userBudget = document.querySelector("input[name='attendance']").value
         const userDate = document.querySelector("input[name='reservation']").value
 
         // Make an object out of the user input
         const dataToSendToAPI = {
-            description: userDescription,
+            duration: userDuration,
             address: userAddress,
             budget: userBudget,
             reservationDate: userDate

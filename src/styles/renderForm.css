@@ -21,3 +21,11 @@
     padding-bottom: 2px;
     font-size: 8px;
 }
+
+
+.serviceRequest {
+    display: flex;
+    flex-direction: column;
+    padding-top: 16px;
+}
+

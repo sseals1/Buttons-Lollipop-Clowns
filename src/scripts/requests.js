@@ -6,7 +6,7 @@ const mainContainer = document.querySelector("#container")
 
 mainContainer.addEventListener("click", 
 click => {
-    if (click.target.id.startsWith("Delete--")) {
+    if (click.target.id.startsWith("Deny--")) {
         const [, requestId] = click.target.id.split("--")
         deleteRequest(parseInt(requestId))
 
@@ -18,7 +18,13 @@ export const Requests = () => {
     const requests = getRequests()
 
     const convertRequestToListElement = (eachResultOfMap) => {
-        return `<li>${eachResultOfMap.description}   <button class="deleteButton" id="Delete--${eachResultOfMap.id}">Delete</button></li>`
+        return `<li>
+        --${eachResultOfMap.address}  
+        -- budget:$${eachResultOfMap.budget} 
+        --${eachResultOfMap.reservationDate}
+        --${eachResultOfMap.duration}
+        <button class="deleteButton" id="Deny-- ${eachResultOfMap.id}">Deny</button> 
+        </li>`
     }
 
     let html = `
